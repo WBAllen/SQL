@@ -1,0 +1,18 @@
+/* What does the app's SQL look like? */
+
+CREATE TABLE hits (id INTEGER PRIMARY KEY, hit_type TEXT, reps INTEGER, side TEXT, time_seconds INTEGER);
+
+INSERT INTO hits VALUES (1,"jab",20,"right",90);
+INSERT INTO hits VALUES (2,"cross",25,"right",100);
+INSERT INTO hits VALUES (3,"uppercut",15,"left",60);
+INSERT INTO hits VALUES (4,"hook",20,"left",95);
+
+SELECT * from hits;
+
+UPDATE hits SET time_seconds = 33 WHERE id = 3;
+
+SELECT * from hits;
+
+DELETE FROM hits WHERE id = 2;
+
+SELECT * from hits;
